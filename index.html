@@ -1,0 +1,338 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Vizianagaram</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/favicon/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body class="relative bg-center bg-cover w-full font-sans  h-auto">
+    <div class="flex justify-end h-auto py-0 bg-[#e3e6f3] grid-cols-2 divide-x ">
+      <label for="Speech Recognition" class="text-sm text-sky-700 px-1 pt-5">Speech Recognition</label>
+      <div class="pt-3">
+      <input type="text" id="speechToText" placeholder="speak something" class="h-10 text-sm text-sky-700 px-1 pt-1 text:mr-4 text:py-2 file:px-4
+      text:rounded-full text:border-0  text:font-semibold" onclick=record()>
+      </div>
+      <div id="google_element" class="text-sm text-sky-700 px-2 py-1"></div>
+        <ul class="flex items-center  grid-cols-2 divide-x">
+          <li>
+            <a
+              href=""
+              class="text-sm text-sky-700  hover:underline decoration-2  px-2 py-1 rounded-md hover:text-[#088178] font-semibold"
+              >Info</a>
+          </li>
+          <li>
+            <a
+              href=""
+              class="text-sm text-sky-700 hover:underline decoration-2 px-2 py-1 rounded-md  hover:text-[#088178] font-semibold"
+              >Status</a
+            >
+          </li>
+          <li>
+            <p class="cursor-pointer    hover:text-[#088178] font-semibold">
+              <a href="account_index.html"><span class="material-icons"> account_circle </span></a>
+            </p>
+            <ul id="opne-dropdown" class="hidden">
+              <li>
+                <a href="#" class="text-sm text-sky-700">+91 99667 37466</a>
+              </li>
+              <li>
+                <a href="" class="text-sm text-sky-700"
+                  >@gmail.com</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="flex">
+          <li class="">
+            <!-- <li>
+                      <a href="#">ID₹ <span class="icon-small"><i class="fas fa-chevron-down"></i></span></a>
+                      <ul>
+                        <li class="current"><a href="#">IDR</a></li>
+                        <li><a href="#">USD</a></li>
+                        <li><a href="#">EURO</a></li>
+                        <li><a href="#">GBP</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">English</a><span class="icon-small"><i class="fas fa-chevron-down"></i></span>
+                      <ul>
+                        <li class="current"><a href="#">English</a></li>
+                        <li><a href="#">Telugu</a></li>
+                        <li><a href="#">Hindi</a></li>
+                        <li><a href="#">Tamil</a></li>
+                      </ul>
+                    </li> -->
+          </li>
+        </ul>
+    </div>
+    <section id="header" class="flex bg-[#e3e6f3]  flex-row z-999 justify-between items-center py-5 ">
+      <div class="flex justify-end py-2">
+        <a href="#"
+            ><img src="/img/favicon.png" class="logo bg-[#e3e6f3]" alt="" width="100" height="100%" />
+        </a>
+        <h1 class="text-5xl italic px-2 py-6">Weather Vizianagaram</h1>
+      </div>
+      <div>
+          <ul id="navbar" class="flex justify-center items-center">
+          <li class="relative px-5 py-0 list-none"><a class="underline text-base font-semibold text-[#088178] ease-in  hover:text-[#088178] 
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2 " 
+            href="/index.html">Home</a></li>
+          <li class="relative px-5 py-0 list-none">
+              <a class=" no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+              after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" 
+              href="/farmers.html">Farmers</a>
+          </li>
+          <li class="relative px-5 py-0 list-none"><a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" 
+            href="fishermen.html">Fishermen</a></li>
+          <li class="relative px-5 py-0 list-none"><a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2 focus:underline active:after:text-[#088178]" href="about.html">About Us</a></li>
+          <li class="relative px-5 py-0 list-none"><a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" href="contact.html">Contact Us</a></li>
+          <div id="login"></div>
+          <li class="relative px-5 py-0 list-none">
+              <a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+              after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" href="/login.html">
+              <i class="fal fa-user"></i></a>
+          </li>
+          </ul>
+      </div>
+    
+    </section>
+    <section id="hero">
+    <h2 class="text-4xl font-bold">All Info</h2>
+    <h4 class="text-base">At One Place</h4>
+    <button>Search Now</button>
+    </section>
+    <div class="flex justify-between items-center bg-[#e0eff5] flex-wrap  drop-shadow-xl  	">
+      <div class="flex justify-between flex-col items-center">
+        <h4 class="card-title">Temp Guide</h4>
+          <div><i class="fas fa-solid fa-sun fa-3x"></i><span class="text-5xl">33<sup>°</sup></span></div>
+          <div class="">
+              <h3 class="">Saturday</h3><small>Vizianagaram, India</small>
+          </div>
+      </div>
+      <table class=" no-border mini-table m-t-20 flex flex-col justify-between">
+          <tbody>
+              <tr>
+                  <td class="text-muted">Wind</td>
+                  <td class="font-medium">SSW 17 mph</td>
+              </tr>
+              <tr>
+                  <td class="text-muted">Humidity</td>
+                  <td class="font-medium">53%</td>
+              </tr>
+              <tr>
+                  <td class="text-muted">Pressure</td>
+                  <td class="font-medium">1013 hPa</td>
+              </tr>
+              <tr>
+                  <td class="text-muted">Cloud Cover</td>
+                  <td class="font-medium">8%</td>
+              </tr>
+          </tbody>
+      </table>
+      <ul class="flex flex-row justify-between drop-shadow-xl">
+          <li class="col-3">
+              <h4 class="text-info"><i class="wi-day-sunny"></i></h4>
+              <span class="d-block text-muted">09:30</span>
+              <h3 class="m-t-5">30<sup>°</sup></h3>
+          </li>
+          <li class="col-3">
+              <h4 class="text-info"><i class="wi wi-day-cloudy"></i></h4>
+              <span class="d-block text-muted">11:30</span>
+              <h3 class="m-t-5">32<sup>°</sup></h3>
+          </li>
+          <li class="col-3">
+              <h4 class="text-info"><i class="wi wi-day-hail"></i></h4>
+              <span class="d-block text-muted">13:30</span>
+              <h3 class="m-t-5">35<sup>°</sup></h3>
+          </li>
+          <li class="col-3">
+              <h4 class="text-info"><i class="wi wi-day-sprinkle"></i></h4>
+              <span class="d-block text-muted">15:30</span>
+              <h3 class="m-t-5">36<sup>°</sup></h3>
+          </li>
+      </ul>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808627.0756581252!2d83.40273431740313!3d18.5032192336366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3be55ac930511f%3A0xb79a630596d3cb68!2sVizianagaram%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1680892012956!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+    <section id="" class="">
+      <h1 class="flex justify-center text-lg pt-3 pb-2 ">Weather for Vizianagaram</h1>
+      <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-4">
+            <table class="min-w-full text-left text-sm font-light" width="100%">
+                <thead class="border-b font-medium border-neutral-700 bg-[#e3e6f3]">
+                    <tr>
+                        <td></td>
+                        <td class="w-22%">Cloud_pct</td>
+                        <td scope="col" class="px-6 py-4">Feels_like</td>
+                        <td scope="col" class="px-6 py-4">Humidity</td>
+                        <td scope="col" class="px-6 py-4 w-22%">Max_temp</td>
+                        <td scope="col" class="px-6 py-4 w-22%">Min_temp</td>
+                        <td scope="col" class="px-6 py-4">sunrise</td>
+                        <td scope="col" class="px-6 py-4">Sunset</td>
+                        <td scope="col" class="px-6 py-4">Temp</td>
+                        <td scope="col" class="px-6 py-4">Wind_degrees</td>
+                        <td scope="col" class="px-6 py-4">Wind_speed</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cart-content">
+                        <td class="whitespace-nowrap px-6 py-4 font-medium">Dwarapudi</td>
+                        <td class="whitespace-nowrap px-6 py-4">sunny</td>
+                        <td class="whitespace-nowrap px-6 py-4">41</td>
+                        <td class="whitespace-nowrap px-6 py-4">52%</td>
+                        <td class="whitespace-nowrap px-6 py-4">36</td>
+                        <td class="whitespace-nowrap px-6 py-4">22</td>
+                        <td class="whitespace-nowrap px-6 py-4">5:46</td>
+                        <td class="whitespace-nowrap px-6 py-4">18:12</td>
+                        <td class="whitespace-nowrap px-6 py-4">33</td>
+                        <td class="whitespace-nowrap px-6 py-4">s</td>
+                        <td class="whitespace-nowrap px-6 py-4">Force 3</td>
+                    </tr>
+                    <tr>
+                      <td class="whitespace-nowrap px-6 py-4 font-medium">Gajuarega</td>
+                      <td class="whitespace-nowrap px-6 py-4">sunny</td>
+                      <td class="whitespace-nowrap px-6 py-4">42</td>
+                      <td class="whitespace-nowrap px-6 py-4">53%</td>
+                      <td class="whitespace-nowrap px-6 py-4">36</td>
+                      <td class="whitespace-nowrap px-6 py-4">22</td>
+                      <td class="whitespace-nowrap px-6 py-4">5:46</td>
+                      <td class="whitespace-nowrap px-6 py-4">18:11</td>
+                      <td class="whitespace-nowrap px-6 py-4">33</td>
+                      <td class="whitespace-nowrap px-6 py-4">SSW</td>
+                      <td class="whitespace-nowrap px-6 py-4">Force 2</td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap px-6 py-4 font-medium">Kongavanipalem</td>
+                    <td class="whitespace-nowrap px-6 py-4">sunny</td>
+                    <td class="whitespace-nowrap px-6 py-4">42</td>
+                    <td class="whitespace-nowrap px-6 py-4">48%</td>
+                    <td class="whitespace-nowrap px-6 py-4">36</td>
+                    <td class="whitespace-nowrap px-6 py-4">22</td>
+                    <td class="whitespace-nowrap px-6 py-4">5:45</td>
+                    <td class="whitespace-nowrap px-6 py-4">18:11</td>
+                    <td class="whitespace-nowrap px-6 py-4">35</td>
+                    <td class="whitespace-nowrap px-6 py-4">s</td>
+                    <td class="whitespace-nowrap px-6 py-4">Force 3</td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </section>
+  
+  <section id="newsletter" class="flex flex-row flex-wrap justify-between  items-center bg-no-repeat bg-right-top px-10 py-10 ">
+    <div class="newstext">
+      <h4 class="tex-22 font-semibold text-[#fff]">Sign Up for Newsletters</h4>
+      <p class="text-14 font-semibold text-[#fff]">
+        Get E-mail updates about our latest shop and
+        <span class="text-[#ffbd27]">Special Offers.</span>
+      </p>
+    </div>
+    <div class="flex flex-row ">
+      <input class="h-50 py-0 px-80 pl-80 ml-30 text-14 border-1 border-solid w-full text-black rounded border-black rounded-tr-0 rounded-br-0 opacity-1"type="text" placeholder="Your Email Address">
+      <button class="normal text-bg-[#088178] text-[#fff] rounded-tl-bl-0 rounded-br-lg-0 whitespace-nowrap">Sign Up</button>
+    </div>
+  </section>
+  <footer class="flex flex-wrap justify-between">
+    <div class="col flex flex-col items-start mb-20 justify-between">
+      <img class="logo mb-30" src="/img/favicon.png" width="20%" height="25%" alt="">
+      <h4 class="text-xl pb-2 font-bold">Contact</h4>
+      <p class="text-base my-0 mt-0 mb-0 ">
+        <strong>Address:</strong>Satya Institute OF Technology and Management <br>
+        Gajulalarega, Vizianagaram, Andhra Pradesh 535002
+        <br>
+        Pincode:535183
+      </p>
+      <p  class="text-base my-0 mt-0 mb-0 "><strong>Phone:</strong>+91 9966737466</p>
+      <p  class="text-base my-0 mt-0 mb-0 "><strong>Hours:</strong>9:00-18:00, Mon-Sun</p>
+      <div class="follow">
+        <h4 class="text-xl pb-2 font-bold">Follow Us</h4>
+        <div class="icon text-[#465b52] pr-4 cursor:pointer hover:text-[#088178] py-0">
+          <i class="fab fa-facebook-f text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+          <i class="fab fa-twitter text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+          <i class="fab fa-instagram text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+          <i class="fab fa-pinterest text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+          <i class="fab fa-youtube text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col flex text-xl flex-col items-start mb-20 py-0 ">
+      <h4 class="text-xl pb-2 font-bold">About</h4>
+      <a class="hover:text-[#088178] text-base py-0" href="about.html">About Us</a>
+      <a class="hover:text-[#088178] text-base py-0" href="policy.html">Privacy Policy</a>
+      <a class="hover:text-[#088178] text-base py-0" href="terms.html">Terms &amp; Conditions</a>
+      <a class="hover:text-[#088178] text-base py-0" href="contact.html">Contact Us</a>
+    </div>
+    <div class="col text-xl mb-20 flex flex-col items-start">
+      <h4 class="text-xl pb-2 font-bold">My Account</h4>
+      <a href="login.html" class="hover:text-[#088178] text-base py-0">Sign In</a>
+      <a href="help.html" class="hover:text-[#088178] text-base py-0">Help</a>
+    </div>
+    <div class="col install text-14 mb-20 flex flex-col items-start">
+      <h4 class="text-xl pb-0 font-bold">Install App</h4>
+      <p  class="text-base my-0 mt-0 mb-0 ">From App Store or Google Play</p>
+      <div class="row">
+        <img class="rounded-md border-[#088178] border-1 border-solid" src="img/pay/app.jpg" alt="">
+        <img class="rounded-md border-[#088178] border-1 border-solid" src="img/pay/play.jpg" alt="">
+      </div>
+      <p  class="text-xl my-0 mt-4 mb-0 font-bold">Secured Payment Gateways</p>
+      <img class="mt-10 mb-0 ml-15 mr-0" src="img/pay/pay.png" alt="">
+    </div>
+    <div class="Copyright text-xl pb-2 text-center w-full">
+      <p  class="text-base my-0 mt-0 mb-0 ">©2023,Weather Vizianagaram</p>
+    </div>
+  </footer>
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+  <script>
+    function loadGoogleTranslate() {
+      new google.translate.TranslateElement(
+        "google_element"
+      )}
+  </script>
+  <script>
+    function record(){
+      var recognition=new webkitSpeechRecognition();
+      recognition.lang="en-GB"
+      recognition.onresult=function(event){
+        console.log(event);
+        document.getElementById('speechToText').value=event.results[0][0].transcript;
+      }
+      recognition.start();
+
+    }
+  </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

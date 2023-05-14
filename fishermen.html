@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Vijaynagaram</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/favicon/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body class="relative bg-center bg-cover w-full font-sans  h-auto">
+    <div class="flex justify-end h-auto py-0 bg-[#e3e6f3] grid-cols-2 divide-x ">
+      <label for="Speech Recognition" class="text-sm text-sky-700 px-1 pt-5">Speech Recognition</label>
+      <div class="pt-3">
+      <input type="text" id="speechToText" placeholder="speak something" class="h-10 text-sm text-sky-700 px-1 pt-1 text:mr-4 text:py-2 file:px-4
+      text:rounded-full text:border-0  text:font-semibold" onclick=record()>
+      </div>
+      <div id="google_element" class="text-sm text-sky-700 px-2 py-1"></div>
+        <ul class="flex items-center  grid-cols-2 divide-x">
+          <li>
+            <a
+              href=""
+              class="text-sm text-sky-700  hover:underline decoration-2  px-2 py-1 rounded-md hover:text-[#088178] font-semibold"
+              >Info</a>
+          </li>
+          <li>
+            <a
+              href=""
+              class="text-sm text-sky-700 hover:underline decoration-2 px-2 py-1 rounded-md  hover:text-[#088178] font-semibold"
+              >Status</a
+            >
+          </li>
+          <li>
+            <p class="cursor-pointer    hover:text-[#088178] font-semibold">
+              <span class="material-icons"> account_circle </span>
+            </p>
+            <ul id="opne-dropdown" class="hidden">
+              <li>
+                <a href="#" class="text-sm text-sky-700">+91 99667 37466</a>
+              </li>
+              <li>
+                <a href="" class="text-sm text-sky-700"
+                  >@gmail.com</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="flex">
+          <li class="">
+            <!-- <li>
+                      <a href="#">ID₹ <span class="icon-small"><i class="fas fa-chevron-down"></i></span></a>
+                      <ul>
+                        <li class="current"><a href="#">IDR</a></li>
+                        <li><a href="#">USD</a></li>
+                        <li><a href="#">EURO</a></li>
+                        <li><a href="#">GBP</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">English</a><span class="icon-small"><i class="fas fa-chevron-down"></i></span>
+                      <ul>
+                        <li class="current"><a href="#">English</a></li>
+                        <li><a href="#">Telugu</a></li>
+                        <li><a href="#">Hindi</a></li>
+                        <li><a href="#">Tamil</a></li>
+                      </ul>
+                    </li> -->
+          </li>
+        </ul>
+    </div>
+    <section id="header" class="flex bg-[#e3e6f3]  flex-row z-999 justify-between items-center py-5 ">
+      <div class="flex justify-end py-2">
+        <a href="#"
+            ><img src="/img/favicon.png" class="logo bg-[#e3e6f3]" alt="" width="100" height="100%" />
+        </a>
+        <h1 class="text-5xl italic px-2 py-6">Weather Vizianagaram</h1>
+      </div>
+      <div>
+          <ul id="navbar" class="flex justify-center items-center">
+          <li class="relative px-5 py-0 list-none"><a class="underline text-base font-semibold text-[#088178] ease-in  hover:text-[#088178] 
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2 focus:underline active:after:text-[#088178]" 
+            href="/index.html">Home</a></li>
+          <li class="relative px-5 py-0 list-none">
+              <a class=" no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+              after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" 
+              href="farmers.html"><i class="fa-solid fa-shop">Farmers</i></a>
+          </li>
+          <li class="relative px-5 py-0 list-none"><a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" 
+            href="fishermen.html">Fishermen</a></li>
+          <li class="relative px-5 py-0 list-none"><a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" href="about.html">About Us</a></li>
+          <li class="relative px-5 py-0 list-none"><a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+            after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" href="contact.html">Contact Us</a></li>
+          <div id="login"></div>
+          <li class="relative px-5 py-0 list-none">
+              <a class="no-underline text-base font-semibold text-[#1a1a1a] ease-in  hover:text-[#088178] active:text-[#088178]
+              after:w-1/3 after:content-[''] after:h-2 after:text-[#088178] after:absolute after:left-20 after:bottom--4 hover:underline decoration-2" href="/public/login.html"
+              ><i class="fal fa-user"></i
+              ></a>
+          </li>
+          </ul>
+      </div>
+    
+    </section>
+    <section id="herofish" class="bg-bottom">
+        <h2 class="text-4xl font-bold">All Info for Fishermen</h2>
+        <div class="flex flex-row items-center justify-between">
+          <h4 class="text-base px-10">At One Place</h4>
+          <button>Search Now</button>
+        </div>
+    </section>
+            <!--// Header -->    
+            <!-- Page Content -->
+            <main class="page-content">
+    
+                <!-- Service Area -->
+                <div id="tm-service-area" class="tm-section tm-service-area tm-padding-section bg-white">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7 col-lg-8 col-md-9 col-12">
+                                <div class="tm-sectiontitle text-center">
+                                    <h2>Our Services</h2>
+                                    <p>We will tell whether it is better to gor fishing today or not!!!.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Service -->
+                            <div class="col-lg-4 col-md-6 col-12 mt-30">
+                                <div class="tm-service text-center tm-scrollanim scrollanim-action">
+                                    <div class="tm-service-inner">
+                                        <div class="tm-service-frontside" data-bgimage="assets/images/service-image-4.jpg" style="background-image: url(&quot;assets/images/service-image-4.jpg&quot;);">
+                                            <h6>Fishing Time</h6>
+                                            <h4>4:00 To 9:00</h4>
+                                        </div>
+                                </div>
+                            </div>
+                            <!--// Single Service -->
+    
+                            <!-- Single Service -->
+                            <div class="col-lg-4 col-md-6 col-12 mt-30">
+                                <div class="tm-service text-center tm-scrollanim scrollanim-action">
+                                    <div class="tm-service-inner">
+                                        <div class="tm-service-frontside" data-bgimage="assets/images/service-image-5.jpg" style="background-image: url(&quot;assets/images/service-image-5.jpg&quot;);">
+                                            <h6>Best Fishing Deals</h6>
+                                        </div>
+                                        <div class="tm-service-backside">
+                                            <p>We may show you the best locations to catch tne fishes.</p>
+                                            <a href="service-details.html" class="tm-readmore">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+    <footer class="flex flex-wrap justify-between">
+        <div class="col flex flex-col items-start mb-20 justify-between">
+            <img class="logo mb-30" src="/img/favicon.png" width="20%" height="25%" alt="">
+            <h4 class="text-xl pb-2 font-bold">Contact</h4>
+            <p class="text-base my-0 mt-0 mb-0 ">
+            <strong>Address:</strong>Satya Institute OF Technology and Management <br>
+            Gajulalarega, Vizianagaram, Andhra Pradesh 535002
+            <br>
+            Pincode:535183
+            </p>
+            <p  class="text-base my-0 mt-0 mb-0 "><strong>Phone:</strong>+91 9966737466</p>
+            <p  class="text-base my-0 mt-0 mb-0 "><strong>Hours:</strong>9:00-18:00, Mon-Sun</p>
+            <div class="follow">
+            <h4 class="text-xl pb-2 font-bold">Follow Us</h4>
+            <div class="icon text-[#465b52] pr-4 cursor:pointer hover:text-[#088178] py-0">
+                <i class="fab fa-facebook-f text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+                <i class="fab fa-twitter text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+                <i class="fab fa-instagram text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+                <i class="fab fa-pinterest text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+                <i class="fab fa-youtube text-[#465b52] pr-4 cursor:pointer hover:text-[#088178]"></i>
+            </div>
+            </div>
+        </div>
+        <div class="col flex text-xl flex-col items-start mb-20 py-0 ">
+            <h4 class="text-xl pb-2 font-bold">About</h4>
+            <a class="hover:text-[#088178] text-base py-0" href="about.html">About Us</a>
+            <a class="hover:text-[#088178] text-base py-0" href="policy.html">Privacy Policy</a>
+            <a class="hover:text-[#088178] text-base py-0" href="terms.html">Terms &amp; Conditions</a>
+            <a class="hover:text-[#088178] text-base py-0" href="contact.html">Contact Us</a>
+        </div>
+        <div class="col text-xl mb-20 flex flex-col items-start">
+            <h4 class="text-xl pb-2 font-bold">My Account</h4>
+            <a href="login.html" class="hover:text-[#088178] text-base py-0">Sign In</a>
+            <a href="help.html" class="hover:text-[#088178] text-base py-0">Help</a>
+        </div>
+        <div class="col install text-14 mb-20 flex flex-col items-start">
+            <h4 class="text-xl pb-0 font-bold">Install App</h4>
+            <p  class="text-base my-0 mt-0 mb-0 ">From App Store or Google Play</p>
+            <div class="row">
+            <img class="rounded-md border-[#088178] border-1 border-solid" src="img/pay/app.jpg" alt="">
+            <img class="rounded-md border-[#088178] border-1 border-solid" src="img/pay/play.jpg" alt="">
+            </div>
+            <p  class="text-xl my-0 mt-4 mb-0 font-bold">Secured Payment Gateways</p>
+            <img class="mt-10 mb-0 ml-15 mr-0" src="img/pay/pay.png" alt="">
+        </div>
+        <div class="Copyright text-xl pb-2 text-center w-full">
+            <p  class="text-base my-0 mt-0 mb-0 ">©2023, Weather Vizianagaram</p>
+        </div>
+        </footer>
+  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+  <script>
+    function loadGoogleTranslate() {
+      new google.translate.TranslateElement(
+        "google_element"
+      )}
+  </script>
+  <script>
+    function record(){
+      var recognition=new webkitSpeechRecognition();
+      recognition.lang="en-GB"
+      recognition.onresult=function(event){
+        console.log(event);
+        document.getElementById('speechToText').value=event.results[0][0].transcript;
+      }
+      recognition.start();
+
+    }
+  </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
